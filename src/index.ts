@@ -16,6 +16,10 @@ async function main() {
 
     const app = express()
 
+    app.get('/', (req, res) => {
+        res.send('HOME ROUTE APP AJI')
+      })
+
     app.use(
         "/graphql",
         graphqlHTTP({
