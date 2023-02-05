@@ -2,9 +2,9 @@ import "reflect-metadata"
 import { buildSchema } from "type-graphql"
 import express from "express"
 import { graphqlHTTP } from "express-graphql"
-import { ActorResolver } from "./src/entity/Actors/actors.resolvers"
-import { AuthorResolver } from "./src/entity/Authors/authors.resolvers"
-import { MovieResolver } from "./src/entity/Movies/movies.resolvers"
+import { ActorResolver } from "./entity/Actors/actors.resolvers"
+import { AuthorResolver } from "./entity/Authors/authors.resolvers"
+import { MovieResolver } from "./entity/Movies/movies.resolvers"
 import dotenv from "dotenv"
 
 dotenv.config()

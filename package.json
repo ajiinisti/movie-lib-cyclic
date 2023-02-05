@@ -36,10 +36,10 @@
   "main": "index.js",
   "scripts": {
     "coverage": "jest --coverage --forceExit --detectOpenHandles",
-    "start": "nodemon --exec  ts-node index.ts",
+    "start": "node dist/index.js",
     "lint": "eslint --ext .js,.ts .",
     "test": "jest --forceExit --detectOpenHandles",
-    "build": "ts-node index.ts"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
