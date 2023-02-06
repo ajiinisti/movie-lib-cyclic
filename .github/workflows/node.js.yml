@@ -36,9 +36,13 @@ jobs:
     - run: npm ci
     - run: npm test
     - name: Deploy production to Netlify
-      uses: jsmrcaga/action-netlify-deploy@master
+      uses: SamKirland/FTP-Deploy-Action@4.3.0
       with:
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
-        NETLIFY_DEPLOY_TO_PROD: true
+        server: movie-lib-aji.rivaldy.space
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password}}
+        server-dir: /movie-lib-aji.rivaldy.space
+        # NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        # NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        # NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
+        # NETLIFY_DEPLOY_TO_PROD: true
