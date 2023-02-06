@@ -36,7 +36,7 @@ jobs:
     - run: npm ci
     - run: npm test
     - name: Deploy production to Netlify
-      uses: SamKirland/FTP-Deploy-Action@4.3.0
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: movie-lib-aji.rivaldy.space
         username: ${{ secrets.ftp_username }}
